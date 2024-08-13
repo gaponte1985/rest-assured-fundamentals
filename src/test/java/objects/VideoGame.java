@@ -1,9 +1,5 @@
-package object;
+package objects;
 
-
-import javax.annotation.processing.Generated;
-
-@Generated("jsonschema2pojo")
 public class VideoGame {
 
     private String category;
@@ -11,8 +7,8 @@ public class VideoGame {
     private String rating;
     private String releaseDate;
     private Integer reviewScore;
-    private Integer id;
 
+    private Integer id;
 
     /**
      * No args constructor for use in serialization
@@ -29,14 +25,13 @@ public class VideoGame {
      * @param rating
      * @param category
      */
-    public VideoGame(String category, String name, String rating, String releaseDate, Integer reviewScore, Integer id) {
+    public VideoGame(String category, String name, String rating, String releaseDate, Integer reviewScore) {
         super();
         this.category = category;
         this.name = name;
         this.rating = rating;
         this.releaseDate = releaseDate;
         this.reviewScore = reviewScore;
-        this.id = id;
     }
 
     public String getCategory() {
@@ -78,12 +73,9 @@ public class VideoGame {
     public void setReviewScore(Integer reviewScore) {
         this.reviewScore = reviewScore;
     }
-    public Integer getId() {
-        return id;
-    }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public Integer getId() { return id; }
+
+    public void setId(Integer id) { this.id = id; }
 
 }

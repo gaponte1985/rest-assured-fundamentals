@@ -1,9 +1,10 @@
-import config.TestConfig;
+import config.VideoGameConfig;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
 
-public class MyFirstTest extends TestConfig {
+
+public class MyFirstVideoGame extends VideoGameConfig {
     @Test
     public void myFirstTest() {
         given()
@@ -13,4 +14,13 @@ public class MyFirstTest extends TestConfig {
                 .then()
                 .log().all();
     }
+
+
+    @Test
+    public void myFirstTestWithEndPoints() {
+       get(VideoGameEndpoints.ALL_VIDEOS_GAMES)
+        .then()
+               .log().all();
+    }
+
 }
